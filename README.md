@@ -13,7 +13,7 @@ The goal of this project is to practice deploying a Node.js application on the A
 
 
 
-# 🛠️ Technologies Used Technology Purpose
+# 🛠️ Technologies Used 
 
 AWS EC2 (t3.micro) - Cloud server to host the application
 
@@ -69,13 +69,22 @@ node --version
 npm --version
 git --version
 5. Clone the project from GitHub
-git clone 
-cd node-js-project
-ls
-# README.md  app.js  package.json
-6. Install dependencies
-sudo npm install
-Without this step, running the app gives the error Cannot find module 'express'.
+git clone https://github.com/darshan2211-darsh/node-js-project.git
+ 
+   Ls app.js  package.json
+
+
+  6. Install dependencies
+
+    sudo npm install
+  ### Without this step, running the app gives the   error Cannot find module 'express'.
+  
+
+<img width="1920" height="1080" alt="Screenshot (12)" src="https://github.com/user-attachments/assets/364849f3-da71-4a0d-ab20-fbe00ad1e428" />
+
+
+
+
 npm install reads package.json and installs Express and its dependencies into node_modules/.
 7. Run the application
 node app.js
@@ -87,22 +96,7 @@ sudo pm2 start app.js
 sudo pm2 list
 9. Open in the browser
 http://<EC2-PUBLIC-IP>:3000
-📦 Packages Installed on the Server
-Package
-Installed using
-Use
-git
-yum
-Clone the project from GitHub
-nodejs (v18) and npm
-yum
-Run JavaScript on the server and manage packages
-express (+ dependencies, 68 packages in total)
-npm install
-Web framework for the app
-pm2
-npm install -g pm2
-Run the app in the background and restart it on failure
+
 📥 Input
 The user opens the EC2 public IP with port 3000 in the browser. This sends an HTTP GET request to the / route of the Express app.
 http://<EC2-PUBLIC-IP>:3000

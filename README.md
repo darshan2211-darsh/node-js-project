@@ -85,56 +85,115 @@ git clone https://github.com/darshan2211-darsh/node-js-project.git
 
 
 
+
+
 npm install reads package.json and installs Express and its dependencies into node_modules/.
-7. Run the application
-node app.js
-# App listening at http://localhost:3000
-8. Keep the app running in the background with PM2
+
+
+###  Run the application
+
+ 
+ node app.js
+ 
+ 
+ App listening at http://localhost:3000
+
+
+ 
+ Keep the app running in the background with PM2
+
+
+
+
+ 
 node app.js stops as soon as the terminal is closed. PM2 solves this.
+
+
 sudo npm install -g pm2
+
+
 sudo pm2 start app.js
-sudo pm2 list
-9. Open in the browser
+
+ Open in the browser
 http://<EC2-PUBLIC-IP>:3000
 
-📥 Input
-The user opens the EC2 public IP with port 3000 in the browser. This sends an HTTP GET request to the / route of the Express app.
-http://<EC2-PUBLIC-IP>:3000
-Server side: installing dependencies and starting the app
-The first run failed because express was missing. After sudo npm install (68 packages added, 0 vulnerabilities), the app started successfully on port 3000.
-�
-Load image
-Running the app with PM2
+# 📥 Input
+
+
+The user opens the EC2 public IP with port 3000 in the browser.
+
+
+The first run failed because express was missing. After sudo npm install (68 packages added, 0 vulnerabilities)
+
+the app started successfully on port 3000.
+
+<img width="1920" height="1080" alt="Screenshot (13)" src="https://github.com/user-attachments/assets/7c1027fe-3a08-4d0d-836e-52e6cc107f30" />
+
+
+### Running the app with PM2
+
+
 PM2 starts app.js as a background process and shows its status as online.
-�
-Load image
-📤 Output
+
+<img width="1920" height="1080" alt="Screenshot (14)" src="https://github.com/user-attachments/assets/c8c583f6-40b6-42ec-9ab0-b8b98cdb1dbd" />
+
+
+# 📤 Output
+
+
+
 The Express app responds with a text message, which is displayed in the browser:
-�
-Load image
-📁 Project Structure
-node-js-project/
-├── app.js          # Express server (listens on port 3000)
-├── package.json    # Project info and dependencies
-├── README.md       # Project documentation
-└── images/         # Screenshots and architecture diagram
-🧩 Challenges Faced
-Problem
-Solution
+
+
+
+<img width="1920" height="1080" alt="Screenshot (15)" src="https://github.com/user-attachments/assets/e6bf86ea-ac13-4f24-a764-a9d6faa35f0b" />
+
+
+
+
+## 🧩 Challenges Faced
+
 Error: Cannot find module 'express'
+
+
+
 Ran sudo npm install to install the missing dependencies
+
+
 App stops when the terminal is closed
+
+
+
+
 Used PM2 to run it as a background process
+
+
 Page not opening in the browser
+
 Added a Custom TCP rule for port 3000 in the Security Group
-✅ Conclusion
+
+
+
+
+# ✅ Conclusion
 In this project, a Node.js application built with Express was successfully deployed on an AWS EC2 server. The code was cloned from GitHub, dependencies were installed with npm, and the application was kept running with PM2. The output in the browser confirms that the server, the Security Group rules and the application all work correctly.
 Through this project I learned:
 Launching an EC2 instance and opening a custom port in the Security Group
 Installing Node.js, npm and Git on a Linux server
 Fixing a missing-module error using npm install
 Running a Node.js app as a background process with PM2
-Future improvements: add Nginx as a reverse proxy on port 80, enable HTTPS with SSL, use pm2 startup so the app restarts automatically after a server reboot, and automate deployment with a CI/CD pipeline (Jenkins / GitHub Actions).
-👤 Author
-Your Name
-GitHub | LinkedIn
+
+
+
+### Future improvements:
+
+
+add Nginx as a reverse proxy on port 80, enable HTTPS with SSL, use pm2 startup so the app restarts automatically after a server reboot, and automate deployment with a CI/CD pipeline (Jenkins / GitHub Actions).
+
+
+
+
+# 👤 Author
+
+### DARSHAN PATIL
+
